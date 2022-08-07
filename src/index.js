@@ -1,1 +1,4 @@
-console.log('running');
+import firstLoad from './load';
+import './style.css';
+
+firstLoad();
