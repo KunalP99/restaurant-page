@@ -1,5 +1,8 @@
 import HomePage from './home';
-import home, { homeDivContainer } from './home';
+import { homeDivContainer } from './home';
+import { menuDivContainer } from './menu';
+
+import MenuPage from './menu';
 import './style.css';
 
 export default function firstLoad() {
@@ -8,6 +11,7 @@ export default function firstLoad() {
     // Appending the return of the functions to the content container
     divContent.appendChild(header());
     divContent.appendChild(HomePage());
+    divContent.appendChild(MenuPage());
 
     return divContent;
 }
@@ -44,8 +48,14 @@ const nav =  () => {
     navItem2.textContent = 'Menu';
     navItem3.textContent = 'Contact';
 
+    navItem1.addEventListener('click', () => {
+        homeDivContainer.style.display = 'flex';
+        menuDivContainer.style.display = 'none';
+
+    });
     navItem2.addEventListener('click', () => {
         homeDivContainer.style.display = 'none';
+        menuDivContainer.style.display = 'flex';
     });
 
     navContainer.appendChild(navItem1);
