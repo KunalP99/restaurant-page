@@ -110,7 +110,7 @@ button {
 }
 
 .menu-items-container {
-    margin-top: var(--xl-size);
+    margin-bottom: var(--xl-size);
 }
 
 .menu-items-container p{
@@ -119,6 +119,60 @@ button {
 
 .menu-img {
     width: 400px;
+}
+
+/* Contact */
+.contact-div-container {
+    display: none;
+    flex-direction: column;
+}
+
+.contact-phone-text {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: var(--m-size);
+}
+
+.phone-icon {
+    width: 40px;
+}
+
+.phone-number {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-banner {
+    object-fit: cover;
+    width: 100%;
+    margin-top: var(--l-size);
+
+}
+
+.contact-quote-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(216, 214, 214);
+    color: black;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
 }
 
 @media (max-width: 800px) {

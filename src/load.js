@@ -1,8 +1,9 @@
 import HomePage from './home';
 import { homeDivContainer } from './home';
-import { menuDivContainer } from './menu';
-
 import MenuPage from './menu';
+import { menuDivContainer } from './menu';
+import ContactPage from './contact';
+import { contactDivContainer } from './contact';
 import './style.css';
 
 export default function firstLoad() {
@@ -12,6 +13,8 @@ export default function firstLoad() {
     divContent.appendChild(header());
     divContent.appendChild(HomePage());
     divContent.appendChild(MenuPage());
+    divContent.appendChild(ContactPage());
+    divContent.appendChild(footer());
 
     return divContent;
 }
@@ -51,11 +54,19 @@ const nav =  () => {
     navItem1.addEventListener('click', () => {
         homeDivContainer.style.display = 'flex';
         menuDivContainer.style.display = 'none';
+        contactDivContainer.style.display = 'none';
 
     });
     navItem2.addEventListener('click', () => {
         homeDivContainer.style.display = 'none';
         menuDivContainer.style.display = 'flex';
+        contactDivContainer.style.display = 'none';
+    });
+    navItem3.addEventListener('click', () => {
+        homeDivContainer.style.display = 'none';
+        menuDivContainer.style.display = 'none';
+        contactDivContainer.style.display = 'flex';
+
     });
 
     navContainer.appendChild(navItem1);
@@ -64,3 +75,15 @@ const nav =  () => {
 
     return navContainer;
 }
+
+const footer = () => {
+    const footerContainer = document.createElement('div');
+    const footerText = document.createElement('p');
+
+    footerText.textContent = 'Copyright @KunalP99';
+
+    footerContainer.classList.add('footer');
+
+    footerContainer.appendChild(footerText);
+    return footerContainer;
+};
